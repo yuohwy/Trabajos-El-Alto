@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Postulación Oficial | HOLA SOY TONY - Reclutamiento</title>
+    <title>Postulación Oficial | YOU TONY - Reclutamiento</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     
     <style>
@@ -88,44 +88,42 @@
         .cover-img-container img {
             width: 100%; height: 100%;
             object-fit: cover;
-            object-position: center 15%;
+            object-position: center 15%; /* Mantiene enfoque en el rostro */
         }
 
         .cover-fade {
-            position: absolute; bottom: 0; left: 0; width: 100%; height: 75%;
-            background: linear-gradient(to bottom, rgba(15,2,12,0) 0%, rgba(15,2,12,0.8) 50%, rgba(15,2,12,1) 100%);
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; /* Ajustado para tapar menos la foto */
+            background: linear-gradient(to bottom, rgba(15,2,12,0) 0%, rgba(15,2,12,0.85) 60%, rgba(15,2,12,1) 100%);
             z-index: 2;
         }
 
         .cover-text {
             position: relative; z-index: 3;
-            text-align: left; padding: 30px 25px;
+            text-align: left; padding: 20px 20px; /* Reducido padding para subir el texto un poco */
             width: 100%;
         }
 
-        /* --- NUEVO: CONTENEDOR DE TITULO Y LOGO --- */
         .title-wrapper {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 12px;
+            gap: 12px;
+            margin-bottom: 8px;
         }
 
         .company-logo {
-            width: 58px;
-            height: 58px;
+            width: 50px; /* Tamaño un poco más pequeño */
+            height: 50px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--color-light-blue);
-            box-shadow: 0 4px 15px rgba(188, 19, 254, 0.5);
+            box-shadow: 0 4px 15px rgba(188, 19, 254, 0.4);
             flex-shrink: 0;
-            /* Animación de salto ligero y suave */
             animation: smoothBounce 3s ease-in-out infinite;
         }
 
         @keyframes smoothBounce {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+            50% { transform: translateY(-6px); }
         }
 
         .text-group {
@@ -135,8 +133,8 @@
         }
 
         .cover-text h1 {
-            font-family: 'Orbitron', sans-serif; font-size: 28px; 
-            margin: 0; font-weight: 900; line-height: 1.1;
+            font-family: 'Orbitron', sans-serif; font-size: 22px; /* Texto más pequeño */
+            margin: 0; font-weight: 900; line-height: 1;
             background: linear-gradient(90deg, var(--color-blue), var(--color-red), var(--color-orange));
             background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             animation: gradientMove 5s linear infinite;
@@ -144,24 +142,25 @@
 
         .assistant-text {
             font-family: 'Inter', sans-serif;
-            font-size: 15px;
+            font-size: 13px; /* Texto más pequeño */
             color: var(--text-muted);
             font-weight: 600;
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         .role-badge {
             display: inline-block;
-            background: rgba(255, 215, 0, 0.15);
-            border: 1px solid rgba(255, 215, 0, 0.3);
+            background: rgba(255, 215, 0, 0.12);
+            border: 1px solid rgba(255, 215, 0, 0.25);
             backdrop-filter: blur(10px);
-            padding: 8px 16px; border-radius: 20px;
+            padding: 6px 12px; border-radius: 15px;
+            margin-top: 5px;
         }
 
         .role-title {
             color: var(--color-orange); font-family: 'Orbitron', sans-serif;
-            font-weight: 900; font-size: 14px; 
-            text-transform: uppercase; letter-spacing: 1.5px; margin: 0;
+            font-weight: 800; font-size: 11px; /* Texto más pequeño */
+            text-transform: uppercase; letter-spacing: 1px; margin: 0;
         }
 
         @keyframes shake-img {
@@ -176,7 +175,7 @@
         
         .urgency-title {
             font-family: 'Orbitron', sans-serif;
-            color: var(--color-red); font-size: 16px; font-weight: 900;
+            color: var(--color-red); font-size: 14px; font-weight: 900;
             text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px;
             animation: pulseText 2s infinite;
         }
@@ -195,33 +194,26 @@
             content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
             background: linear-gradient(90deg, var(--color-blue), var(--color-orange));
         }
-        .time-box span { font-family: 'Orbitron', sans-serif; display: block; font-size: 28px; font-weight: 900; color: #fff; line-height: 1.1; }
-        .time-box small { font-size: 12px; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
+        .time-box span { font-family: 'Orbitron', sans-serif; display: block; font-size: 24px; font-weight: 900; color: #fff; line-height: 1.1; }
+        .time-box small { font-size: 10px; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
 
         .progress-container {
-            width: 100%; height: 24px; background: rgba(0, 0, 0, 0.6);
-            border-radius: 12px; margin-bottom: 12px; overflow: hidden; position: relative;
+            width: 100%; height: 20px; background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px; margin-bottom: 12px; overflow: hidden; position: relative;
             border: 1px solid rgba(255,255,255,0.05);
         }
         .progress-bar {
             height: 100%; width: 0%; 
             background: linear-gradient(90deg, var(--color-blue), var(--color-red), var(--color-orange));
-            background-size: 200% 100%; border-radius: 12px; 
+            background-size: 200% 100%; border-radius: 10px; 
             transition: width 2s cubic-bezier(0.25, 1, 0.5, 1); 
             animation: gradientMove 4s ease infinite;
             position: relative;
         }
-        .progress-bar::after {
-            content: ""; position: absolute; top: 0; left: 0; bottom: 0; right: 0;
-            background: linear-gradient( -45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent );
-            background-size: 30px 30px; border-radius: 12px;
-            animation: moveStripes 1.5s linear infinite;
-        }
         
-        @keyframes moveStripes { 0% { background-position: 0 0; } 100% { background-position: 30px 30px; } }
         @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-        .progress-text { font-size: 14px; color: var(--text-muted); font-weight: 600; margin-bottom: 25px; display: block; }
+        .progress-text { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 25px; display: block; }
 
         /* --- CAJA DE SALARIO --- */
         .salary-box {
@@ -229,87 +221,49 @@
             border: 1px solid rgba(255, 215, 0, 0.2);
         }
         .dark-humor {
-            font-size: 14px; color: #fff; margin-bottom: 20px; font-weight: 600;
-            background: rgba(0, 0, 0, 0.5); padding: 12px 15px; border-radius: 12px;
+            font-size: 13px; color: #fff; margin-bottom: 15px; font-weight: 600;
+            background: rgba(0, 0, 0, 0.5); padding: 10px 12px; border-radius: 12px;
             border-left: 4px solid var(--color-orange); text-align: left; line-height: 1.4;
         }
         .salary-row { 
             display: flex; justify-content: space-between; align-items: center; 
-            margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05);
         }
         .salary-row:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
         
-        .salary-label { font-size: 16px; font-weight: 700; color: var(--text-muted); }
-        .salary-label.highlight { color: #fff; font-size: 18px; }
-        
+        .salary-label { font-size: 14px; font-weight: 700; color: var(--text-muted); }
         .price-tag {
-            font-family: 'Orbitron', sans-serif; color: var(--color-red); font-weight: 900; font-size: 20px;
-            background: rgba(255, 0, 127, 0.1); padding: 6px 14px; border-radius: 10px; border: 1px solid rgba(255,0,127,0.3);
+            font-family: 'Orbitron', sans-serif; color: var(--color-red); font-weight: 900; font-size: 18px;
+            background: rgba(255, 0, 127, 0.1); padding: 6px 12px; border-radius: 10px; border: 1px solid rgba(255,0,127,0.3);
         }
         .price-tag.mensual {
-            font-size: 26px; color: #ffffff; background: linear-gradient(45deg, var(--color-blue), var(--color-red));
+            font-size: 22px; color: #ffffff; background: linear-gradient(45deg, var(--color-blue), var(--color-red));
             border: none; box-shadow: 0 4px 15px rgba(255,0,127,0.3);
-        }
-
-        /* --- LISTAS Y CONTACTO --- */
-        h2 { font-family: 'Orbitron', sans-serif; font-size: 22px; font-weight: 900; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;}
-        
-        .req-badge {
-            background: rgba(255, 215, 0, 0.1); color: var(--color-orange); 
-            padding: 8px 20px; border-radius: 20px; font-weight: 800; font-size: 15px; 
-            margin-bottom: 25px; display: inline-block; border: 1px solid rgba(255,215,0,0.3);
-        }
-
-        ul.job-list { list-style: none; padding: 0; margin: 0 0 25px 0; text-align: left; }
-        ul.job-list li {
-            background: rgba(0, 0, 0, 0.4); margin-bottom: 12px; padding: 16px 20px; border-radius: 16px;
-            font-size: 16px; font-weight: 600; display: flex; align-items: center;
-            border-left: 5px solid var(--color-blue); color: #fff; line-height: 1.4;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        .supervisor-contact {
-            font-size: 16px; font-weight: 700; color: var(--text-muted); margin-bottom: 25px;
-            background: rgba(0, 0, 0, 0.4); padding: 20px; border-radius: 20px;
-            border: 1px dashed rgba(255,215,0,0.4);
-        }
-        .supervisor-contact .num {
-            color: var(--color-red); font-family: 'Orbitron', sans-serif; font-size: 28px; 
-            display: block; margin-top: 8px; letter-spacing: 2px; font-weight: 900;
-            text-shadow: 0 0 10px rgba(255,0,127,0.4);
         }
 
         /* --- BOTONES --- */
         .btn-action {
             display: block; width: 100%; font-family: 'Orbitron', sans-serif;
-            color: white; font-size: 18px; font-weight: 900; padding: 22px 15px;
+            color: white; font-size: 16px; font-weight: 900; padding: 20px 10px;
             border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;
-            border: none; cursor: pointer; position: relative; z-index: 1;
+            border: none; cursor: pointer; text-decoration: none; text-align: center;
             background: linear-gradient(90deg, var(--color-blue), var(--color-red));
             box-shadow: 0 8px 25px rgba(255, 0, 127, 0.4);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .btn-action:active { transform: translateY(2px); box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4); }
 
-        /* --- MAPA --- */
-        .map-section { padding: 30px 20px; }
-        .map-wrapper {
-            display: block; border-radius: 20px; overflow: hidden; position: relative; padding: 3px;
-            background: linear-gradient(45deg, var(--color-blue), var(--color-red));
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            animation: floatMap 4s ease-in-out infinite; 
-            margin-top: 15px;
+        .supervisor-contact {
+            font-size: 14px; font-weight: 700; color: var(--text-muted); margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.4); padding: 15px; border-radius: 20px;
+            border: 1px dashed rgba(255,215,0,0.4);
         }
-        @keyframes floatMap { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-        
-        .map-wrapper::after {
-            content: '📍 Toca para abrir GPS'; position: absolute; bottom: 15px; left: 50%;
-            transform: translateX(-50%); background: rgba(0, 0, 0, 0.85); color: white;
-            padding: 10px 24px; border-radius: 30px; font-size: 13px; font-weight: 800;
-            width: max-content; z-index: 5; backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.1);
+        .supervisor-contact .num {
+            color: var(--color-red); font-family: 'Orbitron', sans-serif; font-size: 24px; 
+            display: block; margin-top: 5px; letter-spacing: 2px; font-weight: 900;
         }
-        .map-img { width: 100%; height: auto; display: block; border-radius: 17px; }
+
+        .map-section p:first-child { font-size: 18px; }
 
     </style>
 </head>
@@ -320,7 +274,7 @@
 
     <div class="container">
         
-        <!-- Cabecera Perfil (Estilo Portada Glassmorphism) -->
+        <!-- Cabecera Perfil -->
         <div class="corporate-card cover-card" id="perfil-wrapper">
             <div class="cover-img-container">
                 <img src="https://i.postimg.cc/SQCyghrD/IMG-20250419-153933-174.jpg" alt="YOU TONY">
@@ -328,10 +282,9 @@
             </div>
             
             <div class="cover-text">
-                <!-- NUEVO: Título y Logo alineados -->
                 <div class="title-wrapper">
-                    <!-- He colocado un logo temporal con las iniciales TE (Trabajos El Alto). Puedes cambiar el src por la URL de tu propio logo si ya tienes uno en Postimages. -->
-                    <img src="https://ui-avatars.com/api/?name=TE&background=0f020c&color=ff9ad0&size=150&rounded=true&bold=true" alt="trabajos el alto" class="company-logo">
+                    <!-- Imagen del logo ajustada -->
+                    <img src="imj" alt="trabajos el alto.png" class="company-logo">
                     <div class="text-group">
                         <h1>YOU TONY</h1>
                         <span class="assistant-text">Tu asistente de trabajo</span>
@@ -361,14 +314,14 @@
             <span class="progress-text">Cupos de entrevista reduciéndose rápidamente...</span>
 
             <div class="salary-box">
-                <div class="dark-humor">"Turnos disponibles: mañana o tarde (4 horas)"</div>
+                <div class="dark-humor">"Turnos de 4 horas: Mañana o Tarde"</div>
                 
                 <div class="salary-row">
-                    <span class="salary-label">Ingreso Semanal</span>
+                    <span class="salary-label">Semanal</span>
                     <span class="price-tag">600 Bs</span>
                 </div>
                 <div class="salary-row">
-                    <span class="salary-label highlight">Ingreso Mensual</span>
+                    <span class="salary-label" style="color:#fff">Mensual</span>
                     <span class="price-tag mensual">2.400 Bs</span>
                 </div>
             </div>
@@ -376,31 +329,24 @@
 
         <!-- Info Vacantes -->
         <div class="corporate-card">
-            <h2>Puestos Administrativos</h2>
+            <h2 style="font-size: 18px;">Puestos Administrativos</h2>
             
             <div class="req-badge">
                 🎯 Requisito: 18 a 28 años
             </div>
 
-            <ul class="job-list">
-                <li style="border-left-color: var(--color-blue);">Gestión de Atención al Cliente</li>
-                <li style="border-left-color: var(--color-orange);">Registro de Datos y Llamadas</li>
-                <li style="border-left-color: var(--color-red);">Apoyo en Marketing Digital</li>
-            </ul>
-
             <div class="supervisor-contact">
-                👨‍💼 Directo con el supervisor:
+                👨‍💼 Supervisor Directo:
                 <span class="num">75954334</span>
             </div>
 
-            <!-- El mensaje de WhatsApp fue actualizado con "YOU TONY" -->
-            <a href="https://wa.me/59175954334?text=HOLA%20YOU%20TONY%20ME%20DAS%20MAS%20INFORMACION%20DEL%20TRABAJO" target="_blank" class="btn-action" style="text-align: center; text-decoration: none;">Agendar Entrevista Oficial</a>
+            <a href="https://wa.me/59175954334?text=HOLA%20YOU%20TONY%20ME%20DAS%20MAS%20INFORMACION%20DEL%20TRABAJO" target="_blank" class="btn-action">Agendar Entrevista</a>
         </div>
 
         <!-- Mapa -->
         <div class="corporate-card map-section">
-            <p style="font-family: 'Orbitron', sans-serif; margin: 0 0 8px 0; font-weight: 900; font-size: 20px; text-transform: uppercase;">Ubicación de Entrevistas</p>
-            <p style="font-size: 14px; color: var(--text-muted); margin: 0; font-weight: 400; line-height: 1.5;"> Bolivia - La Paz - El Alto <br> Al frente de la Alcaldía quemada </p>
+            <p style="font-family: 'Orbitron', sans-serif; margin: 0 0 8px 0; font-weight: 900; text-transform: uppercase;">Ubicación</p>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 0; font-weight: 400; line-height: 1.5;"> Bolivia - El Alto <br> Frente Alcaldía Quemada </p>
             
             <a href="https://maps.app.goo.gl/RLQBz58jcMQYmAWQ7" target="_blank" class="map-wrapper">
                 <img src="https://i.postimg.cc/R02BTsnZ/IMG-20260325-093736-975.jpg" alt="Mapa El Alto" class="map-img">
@@ -409,11 +355,8 @@
     </div>
 
     <script>
-        /* 1. Temporizador */
         function setupTimer() {
-            // Se actualizó para el 31 de mayo de 2026. (El mes 4 en JavaScript equivale a Mayo)
             const targetDate = new Date(2026, 4, 31, 23, 59, 59); 
-            
             document.getElementById('end-date-text').innerText = "31 de Mayo";
 
             function updateCountdown() {
@@ -426,18 +369,15 @@
                 document.getElementById('minutes').innerText = Math.floor((timeRemaining / 1000 / 60) % 60).toString().padStart(2, '0');
                 document.getElementById('seconds').innerText = Math.floor((timeRemaining / 1000) % 60).toString().padStart(2, '0');
 
-                // Fecha de inicio de referencia para la barra de progreso (1 de Mayo de 2026)
                 const startDate = new Date(2026, 4, 1).getTime();
                 let percentage = ((currentDate.getTime() - startDate) / (targetDate.getTime() - startDate)) * 100;
-                
                 document.getElementById('timeProgress').style.width = Math.min(Math.max(percentage, 0), 100) + '%';
             }
-            setTimeout(updateCountdown, 100); 
+            updateCountdown();
             setInterval(updateCountdown, 1000);
         }
         document.addEventListener('DOMContentLoaded', setupTimer);
 
-        /* 3. Corazones Optimizados */
         (function(){
             const layer = document.getElementById('heartLayer');
             const COLORS = ["#bc13fe", "#ff007f", "#ffd700", "#ff9ad0"];
@@ -449,32 +389,21 @@
                 el.innerHTML = HEART_SVG(COLORS[Math.floor(Math.random() * COLORS.length)]);
                 el.style.left = (x - 15) + 'px';
                 el.style.top = (y - 15) + 'px';
-                el.style.transform = `rotate(${(Math.random() * 40) - 20}deg)`;
-                
                 layer.appendChild(el);
                 el.addEventListener('animationend', () => { el.remove(); }, { once: true });
             }
 
-            function handlePointer(x, y) {
-                const count = 1 + Math.floor(Math.random() * 2);
-                for (let i=0; i<count; i++){
-                    createHeart(x + (Math.random() * 20 - 10), y + (Math.random() * 20 - 10));
-                }
-            }
-
-            window.addEventListener('click', (e) => { handlePointer(e.clientX, e.clientY); });
+            window.addEventListener('click', (e) => { createHeart(e.clientX, e.clientY); });
             window.addEventListener('touchstart', (e) => {
-                handlePointer(e.touches[0].clientX, e.touches[0].clientY);
+                createHeart(e.touches[0].clientX, e.touches[0].clientY);
             }, {passive:true});
         })();
 
-        /* 4. Audio Perfil */
         document.addEventListener("DOMContentLoaded", () => {
             const perfilWrapper = document.getElementById('perfil-wrapper');
             const bgAudio = new Audio("https://www.dropbox.com/scl/fi/sm7gtduc8eamj0c4bnryn/Alok_-Alan-Walker-Headlights-Lyrics-ft.-KIDDO-MP3_160K.mp3?rlkey=turyzxelynu77zog74kb1oajj&st=jeznsnl1&dl=1");
 
             perfilWrapper.addEventListener('click', (e) => {
-                e.stopPropagation(); 
                 if (bgAudio.paused) bgAudio.play().catch(() => {});
                 perfilWrapper.classList.add('shake-active');
                 setTimeout(() => { perfilWrapper.classList.remove('shake-active'); }, 400);
