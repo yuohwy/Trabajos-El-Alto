@@ -265,6 +265,24 @@
 
         .map-section p:first-child { font-size: 18px; }
 
+        /* --- BOLITAS ANIMADAS DE LISTA --- */
+        .neon-dot {
+            display: inline-block;
+            width: 10px; 
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+            animation: colorCycle 3s infinite alternate;
+        }
+
+        @keyframes colorCycle {
+            0% { background-color: var(--color-blue); box-shadow: 0 0 8px var(--color-blue); transform: scale(1); }
+            33% { background-color: var(--color-red); box-shadow: 0 0 10px var(--color-red); transform: scale(1.2); }
+            66% { background-color: var(--color-orange); box-shadow: 0 0 8px var(--color-orange); transform: scale(1); }
+            100% { background-color: var(--color-blue); box-shadow: 0 0 12px var(--color-blue); transform: scale(1.2); }
+        }
+
     </style>
 </head>
 <body>
@@ -277,14 +295,15 @@
         <!-- Cabecera Perfil -->
         <div class="corporate-card cover-card" id="perfil-wrapper">
             <div class="cover-img-container">
-                <img src="img/ROBER.jpg" alt="Imagen de ROBER">
+                <!-- He añadido un "onerror" por si las imágenes locales fallan al previsualizar -->
+                <img src="img/ROBER.jpg" alt="Imagen de ROBER" onerror="this.src='https://placehold.co/400x500/1e0519/bc13fe?text=FOTO+ROBER'">
                 <div class="cover-fade"></div>
             </div>
             
             <div class="cover-text">
                 <div class="title-wrapper">
-                    <!-- Imagen del logo ajustada (MODIFICADO AQUÍ) -->
-                    <img src="img/trabajos%20el%20alto.png" alt="Campaña El Alto" class="company-logo">
+                    <!-- Imagen del logo ajustada -->
+                    <img src="img/trabajos%20el%20alto.png" alt="Campaña El Alto" class="company-logo" onerror="this.src='https://placehold.co/100x100/1e0519/ff007f?text=LOGO'">
                     <div class="text-group">
                         <h1>HOLA SOY TONY</h1>
                         <span class="assistant-text">Tu asistente de trabajo</span>
@@ -331,17 +350,17 @@
         <div class="corporate-card">
             <h2 style="font-size: 18px;">Puestos Administrativos</h2>
             
-            <div class="req-badge">
-                😯 Personal de 18 a 28 años área disponible Publicidad y Marketing!
+            <div class="req-badge" style="text-align: left; font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px;">
+                😯 Personal de 18 a 28 años área disponible Publicidad y Marketing!<br><br>
 
-La persona seleccionada se encargará de:
+                La persona seleccionada se encargará de:<br><br>
 
-✅ Contestar llamadas
-✅ Brindar información
-✅ Agendar entrevistas
-✅ Apoyar en el área de publicidad y organización
+                <span class="neon-dot" style="animation-delay: 0s;"></span> Contestar llamadas<br>
+                <span class="neon-dot" style="animation-delay: 0.4s;"></span> Brindar información<br>
+                <span class="neon-dot" style="animation-delay: 0.8s;"></span> Agendar entrevistas<br>
+                <span class="neon-dot" style="animation-delay: 1.2s;"></span> Apoyar en el área de publicidad y organización<br><br>
 
-Se busca una persona responsable, amable y con buena comunicación.
+                Se busca una persona responsable, amable y con buena comunicación.
             </div>
 
             <div class="supervisor-contact">
@@ -355,10 +374,16 @@ Se busca una persona responsable, amable y con buena comunicación.
         <!-- Mapa -->
         <div class="corporate-card map-section">
             <p style="font-family: 'Orbitron', sans-serif; margin: 0 0 8px 0; font-weight: 900; text-transform: uppercase;">Ubicación</p>
-            <p style="font-size: 13px; color: var(--text-muted); margin: 0; font-weight: 400; line-height: 1.5;"> Bolivia - El Alto <br> Frente Alcaldía Quemada </p>
             
-            <!-- Iframe de Google Maps Integrado -->
+            <!-- ====== MODIFICA TUS DATOS DE UBICACIÓN AQUÍ ====== -->
+            <p style="font-size: 13px; color: var(--text-muted); margin: 0; font-weight: 400; line-height: 1.5;"> 
+                Bolivia - [Tu Nueva Ciudad] <br> 
+                [Tu Nueva Dirección o Referencia] 
+            </p>
+            
             <div class="map-wrapper" style="margin-top: 15px; border-radius: 12px; overflow: hidden; background: rgba(0,0,0,0.3);">
+                <!-- ====== PEGA AQUÍ TU NUEVO IFRAME DE GOOGLE MAPS ====== -->
+                <!-- A continuación he dejado tu mapa anterior (El Alto). Reemplaza toda la etiqueta <iframe> por la nueva -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1600.0155583388646!2d-68.16288287091831!3d-16.504685948055126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-16.504877697186213!2d-68.1621241491276!5e1!3m2!1ses!2sbo!4v1778015714943!5m2!1ses!2sbo" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
